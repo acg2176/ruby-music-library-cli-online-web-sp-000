@@ -1,10 +1,11 @@
+require 'pry'
 class MusicLibraryController
   extend Concerns::Findable
-  
+
   def initialize(path='./db/mp3s')
     @path = path
     music_importer = MusicImporter.new(path)
-    music_importer.import
+    music_importer.import #
   end
 
   def call
@@ -22,6 +23,7 @@ class MusicLibraryController
   end
 
   def list_songs
-
+    Song.all
+    binding.pry
   end
 end
