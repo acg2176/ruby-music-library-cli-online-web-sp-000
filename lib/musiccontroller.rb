@@ -1,4 +1,6 @@
 class MusicLibraryController
+  extend Concerns::Findable
+  
   def initialize(path='./db/mp3s')
     @path = path
     music_importer = MusicImporter.new(path)
@@ -19,5 +21,7 @@ class MusicLibraryController
     exit
   end
 
-  
+  def list_songs
+
+  end
 end
