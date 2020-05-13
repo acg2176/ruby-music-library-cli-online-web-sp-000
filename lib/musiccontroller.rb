@@ -21,9 +21,4 @@ class MusicLibraryController
     reply = gets
     exit
   end
-
-  def list_songs
-    Song.all
-    binding.pry
-  end
 end
